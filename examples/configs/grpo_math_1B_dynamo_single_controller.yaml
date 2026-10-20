@@ -48,7 +48,7 @@ policy:
       kv_cache_dtype: auto
       enforce_eager: true
       expose_http_server: false
-      # Only the legacy GRPO loop reads Dynamo's metrics sampler.
+      # Needs rollout_checkpointing.telemetry_interval_s, whose pump drains it.
       enable_vllm_metrics_logger: false
       vllm_metrics_logger_interval: 1.0
       env_vars:
